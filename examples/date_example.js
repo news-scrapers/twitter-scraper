@@ -9,7 +9,10 @@ const client = new Twitter({
     access_token_secret: process.env.ACCESS_TOKEN_SECRET
 });
 // https://developer.twitter.com/docs/things-every-developer-should-know
-//#suicidio geocode:42.4,-3.7,1000km since:2019-05-01 until:2019-05-02 count=1000
+
+//https://twitter.com/search-home
+//#suicidio geocode:42.4,-3.7,1000km since:2019-05-01 until:2019-05-05
+//https://twitter.com/search?q=%23suicidio%20geocode%3A42.4%2C-3.7%2C650km%20since%3A2019-05-01%20until%3A2019-05-05&src=typd
 
 client.get('search/tweets', {q: '@vox_es', until:'2019-05-01'}, function(error, tweets, response) {
     console.log(tweets);
